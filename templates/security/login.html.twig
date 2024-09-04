@@ -11,7 +11,8 @@
         <button type="submit">Login</button>
 
         {% if error %}
-            <div>{{ error.messageKey }}</div>
+            <div class="alert">{{ error.messageKey }}</div>
         {% endif %}
     </form>
+    <a href="{{ path('homepage') }}" class="btn btn-secondary">Back</a>
 {% endblock %}

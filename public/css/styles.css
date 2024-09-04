@@ -1,0 +1,153 @@
+/* CSS de base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('/images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+nav {
+    background-color: rgba(24, 26, 27, 0.8); /* Couleur avec transparence */
+    color: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Aligne les éléments avec de l'espace entre eux */
+}
+
+nav .logo-container {
+    display: flex;
+    justify-content: center; /* Centre le logo horizontalement dans le conteneur */
+    flex: 1; /* Permet au conteneur de prendre tout l'espace disponible */
+}
+
+nav .logo {
+    height: 40px; /* Ajustez si nécessaire */
+}
+
+nav .auth-buttons {
+    margin-left: auto; /* Pousse le conteneur des boutons vers la droite */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin-left: 0.5rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    color: white;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+}
+
+.btn-primary, .btn-secondary, .btn-warning, .btn-danger {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    display: inline-block; /* Assure que les boutons ont la même largeur et hauteur */
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: rgba(24, 26, 27, 0.8); /* Couleur avec transparence */
+    border-radius: 4px;
+}
+
+h1 {
+    color: white; /* Maintien du texte en blanc */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Assure que le formulaire occupe toute la largeur disponible */
+    max-width: 400px; /* Largeur maximale du formulaire */
+    margin: 0 auto; /* Centre le formulaire horizontalement */
+}
+
+form label {
+    margin-top: 1rem;
+    color: white; /* Maintien du texte des labels en blanc */
+    display: block; /* S'assure que les labels prennent toute la largeur disponible */
+}
+
+form input[type="text"], 
+form input[type="password"] {
+    width: calc(100% - 2px); /* Réduit la largeur des champs de texte */
+    padding: 0.5rem; /* Augmente légèrement le padding pour une meilleure apparence */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 0.5rem; /* Ajuste la marge au-dessus des champs */
+    color: white; /* Maintien du texte en blanc dans les champs */
+    background-color: rgba(0, 0, 0, 0.5); /* Arrière-plan légèrement transparent pour les champs */
+}
+
+form button {
+    max-width: 300px; /* Ajustez la largeur selon vos besoins */
+    padding: 0.5rem; /* Augmente le padding pour un meilleur confort */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white; /* Maintien du texte du bouton en blanc */
+    background-color: #007bff; /* Couleur du bouton Login */
+    font-size: 1rem; /* Ajuste la taille du texte du bouton */
+    margin: 0.5rem auto; /* Réduit la distance entre les boutons et centre le bouton horizontalement */
+    display: inline-block; /* Assure que le bouton a la même largeur et hauteur que les autres */
+}
+
+form .btn-back {
+    background-color: #6c757d; /* Couleur gris pour le bouton Back */
+    margin-top: 0.25rem; /* Réduit la marge supérieure pour rapprocher les boutons */
+}
+
+.alert {
+    color: #dc3545;
+    margin-top: 1rem;
+}
+
+.centered-content {
+    text-align: center;
+}
+
+.centered-content h1 {
+    margin-bottom: 2rem;
+}
+
+.centered-content .btn-primary {
+    margin-top: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    color: white;
+}
