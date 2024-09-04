@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>{{ product.name }}</h1>
+    <p>Code: {{ product.code }}</p>
+    <p>Description: {{ product.description }}</p>
+    <p>Category: {{ product.category }}</p>
+    <p>Price: {{ product.price }}€</p>
+    <p>Quantity: {{ product.quantity }}</p>
+    <p>Internal Reference: {{ product.internalReference }}</p>
+    <p>Shell ID: {{ product.shellId }}</p>
+    <p>Inventory Status: {{ product.inventoryStatus }}</p>
+    <p>Rating: {{ product.rating }}</p>
+    <p>Created At: {{ product.createdAt|date('Y-m-d H:i') }}</p>
+    <p>Updated At: {{ product.updatedAt|date('Y-m-d H:i') }}</p>
+
+    {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('product_edit', { id: product.id }) }}" class="btn btn-warning">Edit</a>
+    {% endif %}
+    <a href="{{ path('product_index') }}" class="btn btn-secondary">Back to list</a>
+{% endblock %}

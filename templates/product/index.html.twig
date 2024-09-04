@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Products</h1>
+    
+    {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('product_create') }}" class="btn btn-primary">Add New Product</a>
+    {% endif %}
+    
+    <ul>
+    {% for product in products %}
+        <li>
+            <a href="{{ path('product_show', { id: product.id }) }}">{{ product.name }}</a>
+            - {{ product.price }}€
+            {% if is_granted('ROLE_ADMIN') %}
+                <a href="{{ path('product_edit', { id: product.id }) }}" class="btn btn-warning">Edit</a>
+                <form action="{{ path('product_delete', { id: product.id }) }}" method="post" style="display:inline;">
+                    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ product.id) }}">
+                    <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?');">Delete</button>
+                </form>
+            {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}
