@@ -11,7 +11,6 @@
     {% for product in products %}
         <li>
             <a href="{{ path('product_show', { id: product.id }) }}">{{ product.name }}</a>
-            - {{ product.price }}€
             {% if is_granted('ROLE_ADMIN') %}
                 <a href="{{ path('product_edit', { id: product.id }) }}" class="btn btn-warning">Edit</a>
                 <form action="{{ path('product_delete', { id: product.id }) }}" method="post" style="display:inline;">
@@ -19,6 +18,7 @@
                     <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?');">Delete</button>
                 </form>
             {% endif %}
+            {{ product.price }}€
         </li>
     {% endfor %}
     </ul>
