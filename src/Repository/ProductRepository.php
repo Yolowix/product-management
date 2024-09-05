@@ -34,18 +34,18 @@ class ProductRepository extends ServiceEntityRepository
 
     public function createProduct(Product $product): void
     {
-        $this->entityManager ->persist($product);
-        $this->entityManager ->flush();
+        $this->entityManager->persist($product);
+        $this->entityManager->flush();
     }
 
     public function updateProduct(Product $product): void
     {
-        $this->entityManager ->flush();
+        $this->entityManager->flush();
     }
 
     public function deleteProduct(Product $product): void
     {
-        $this->entityManager ->remove($product);
-        $this->entityManager ->flush();
+        $this->entityManager->remove($product);
+        $this->entityManager->flush();
     }
 }
