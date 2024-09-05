@@ -4,6 +4,10 @@
 - composer
 - symfony7.1
 
+# Initialisation du projet
+
+- Faire un `composer install`, pour installer toutes les librairies
+
 # BDD
 
 - Changer l'url de la bdd dans le `.env` si besoin ou se baser dessus  
@@ -14,7 +18,6 @@
 
 # Lancement du projet
 
-- Faire un `composer install`, pour installer toutes les librairies
 - Faire un `symfony server:start` pour lancer le projet
 
 # Information supplémentaire
