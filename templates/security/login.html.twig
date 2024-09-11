@@ -2,17 +2,17 @@
 
 {% block body %}
     <form action="{{ path('app_login') }}" method="post">
-        <label for="username">Username</label>
+        <label for="username">{{ 'username'|trans }}</label>
         <input type="text" id="username" name="username" value="{{ last_username }}" required />
 
-        <label for="password">Password</label>
+        <label for="password">{{ 'password'|trans }}</label>
         <input type="password" id="password" name="password" required />
 
-        <button type="submit">Login</button>
+        <button type="submit">{{ 'login'|trans }}</button>
 
         {% if error %}
-            <div class="alert">{{ error.messageKey }}</div>
+            <div class="alert">{{ error.messageKey|trans }}</div>
         {% endif %}
     </form>
-    <a href="{{ path('homepage') }}" class="btn btn-secondary">Back</a>
+    <a href="{{ path('homepage') }}" class="btn btn-secondary">{{ 'back'|trans }}</a>
 {% endblock %}

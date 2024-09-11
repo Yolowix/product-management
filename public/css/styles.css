@@ -239,3 +239,8 @@ ul li a, ul li button {
     text-align: right;
     margin-right: 1rem;
 }
+
+.language-switcher a {
+    margin: 0 0.5rem;
+    text-decoration: none;
+}

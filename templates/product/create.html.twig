@@ -1,14 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Add New Product{% endblock %}
+{% block title %}{{ 'add_new_product'|trans }}{% endblock %}
 
 {% block body %}
-    <h1>Add New Product</h1>
-    
+    <h1>{{ 'add_new_product'|trans }}</h1>
+
     {{ form_start(form) }}
         {{ form_widget(form) }}
-        <button class="btn btn-primary">Create</button>
+        <button class="btn btn-primary">{{ 'create'|trans }}</button>
     {{ form_end(form) }}
 
-    <a href="{{ path('product_index') }}" class="btn btn-secondary">Back to List</a>
+    <a href="{{ path('product_index') }}" class="btn btn-secondary">{{ 'back_to_list'|trans }}</a>
 {% endblock %}

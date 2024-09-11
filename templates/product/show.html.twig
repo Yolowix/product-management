@@ -4,21 +4,21 @@
     <div class="product-details">
         <h1>{{ product.name }}</h1>
         <div class="product-info">
-            <p><strong>Code:</strong> {{ product.code }}</p>
-            <p><strong>Description:</strong> {{ product.description }}</p>
-            <p><strong>Category:</strong> {{ product.category }}</p>
-            <p><strong>Price:</strong> {{ product.price }}€</p>
-            <p><strong>Quantity:</strong> {{ product.quantity }}</p>
-            <p><strong>Internal Reference:</strong> {{ product.internalReference }}</p>
-            <p><strong>Shell ID:</strong> {{ product.shellId }}</p>
-            <p><strong>Inventory Status:</strong> {{ product.inventoryStatus }}</p>
-            <p><strong>Rating:</strong> {{ product.rating }}</p>
-            <p><strong>Created At:</strong> {{ product.createdAt|date('Y-m-d H:i') }}</p>
-            <p><strong>Updated At:</strong> {{ product.updatedAt|date('Y-m-d H:i') }}</p>
+            <p><strong>{{ 'code'|trans }}:</strong> {{ product.code }}</p>
+            <p><strong>{{ 'description'|trans }}:</strong> {{ product.description }}</p>
+            <p><strong>{{ 'category'|trans }}:</strong> {{ product.category }}</p>
+            <p><strong>{{ 'price'|trans }}:</strong> {{ product.price }}€</p>
+            <p><strong>{{ 'quantity'|trans }}:</strong> {{ product.quantity }}</p>
+            <p><strong>{{ 'internal_reference'|trans }}:</strong> {{ product.internalReference }}</p>
+            <p><strong>{{ 'shell_id'|trans }}:</strong> {{ product.shellId }}</p>
+            <p><strong>{{ 'inventory_status'|trans }}:</strong> {{ product.inventoryStatus }}</p>
+            <p><strong>{{ 'rating'|trans }}:</strong> {{ product.rating }}</p>
+            <p><strong>{{ 'created_at'|trans }}:</strong> {{ product.createdAt|date('Y-m-d H:i') }}</p>
+            <p><strong>{{ 'updated_at'|trans }}:</strong> {{ product.updatedAt|date('Y-m-d H:i') }}</p>
         </div>
     </div>
-        {% if is_granted('ROLE_ADMIN') %}
-            <a href="{{ path('product_edit', { id: product.id }) }}" class="btn btn-warning">Edit</a>
-        {% endif %}
-        <a href="{{ path('product_index') }}" class="btn btn-secondary">Back to list</a>
+    {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('product_edit', { id: product.id }) }}" class="btn btn-warning">{{ 'edit'|trans }}</a>
+    {% endif %}
+    <a href="{{ path('product_index') }}" class="btn btn-secondary">{{ 'back_to_list'|trans }}</a>
 {% endblock %}
