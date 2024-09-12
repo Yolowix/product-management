@@ -6,7 +6,7 @@
 parameters:
 
 services:
-    App\EventSubscriber\LocaleSubscriber:
+    App\Subscriber\LocaleSubscriber:
         arguments:
             $defaultLocale: '%kernel.default_locale%'
         tags:
